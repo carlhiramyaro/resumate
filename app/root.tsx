@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import { useEffect } from "react";
 import { usePuterStore } from "./lib/puter";
+import { Analytics } from "@vercel/analytics/next";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -43,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <script src="https://js.puter.com/v2/"></script>
 
         {children}
+        <Analytics />
         <ScrollRestoration />
         <Scripts />
       </body>
